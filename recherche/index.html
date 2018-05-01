@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: defaultWithSearchBar
 ---
 
-<!-- <?php include "searchBar.php"; ?> -->
 <div class="container">
     <div class="filtres">
         <form>
@@ -40,14 +39,14 @@ layout: default
             </div>
         </div>
         <div class="resultats-liste">
-            <?php for ($i = 0; $i < 5; $i++): ?>
+            {% for i in (1..5) %}
             <div class="resultat">
-                <a class="btn-details" href="details.php" title="Voir l'offre">Détails</a>
+                <a class="btn-details" href="/details" title="Voir l'offre">Détails</a>
                 <p>Pseudo (note)</p>
                 <p>Localité - Mode de livraison</p>
                 <p>Description de l'offre</p>
             </div>
-            <?php endfor; ?>
+            {% endfor %}
         </div>
     </div>
 </div>

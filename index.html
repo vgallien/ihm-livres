@@ -4,7 +4,7 @@ layout: default
 
 <section class="illustration">
     <div class="illustration-search">
-        <form action="recherche.php">
+        <form action="/recherche">
             <input type="search" placeholder="Rechercher un livre" /><!--
             --><input type="submit" value="Chercher" />
         </form>
@@ -12,7 +12,7 @@ layout: default
 </section>
 <section class="avantages">
     <div class="container">
-        <!-- <?php for ($i = 0; $i < 3; $i++): ?> -->
+        {% for i in (1..3) %}
         <div class="avantage">
             <div class="avantage-img">
                 <img src="images/placeholder.png" alt="" title="" />
@@ -23,6 +23,6 @@ layout: default
                 </p>
             </div>
         </div>
-        <!-- <?php endfor; ?> -->
+        {% endfor %}
     </div>
 </section>
