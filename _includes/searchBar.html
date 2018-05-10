@@ -1,6 +1,7 @@
 <div class="searchBar">
     <form action="{{ site.baseurl }}/recherche">
-        <input type="search" placeholder="Rechercher un titre" /><!--
+        <input list="livres" type="search" placeholder="Titre du livre recherché" /><!--
         --><input type="submit" value="Chercher" />
+        {% include data-livres.html %}
     </form>
 </div>

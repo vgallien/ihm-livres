@@ -5,8 +5,9 @@ layout: default
 <section class="illustration">
     <div class="illustration-search">
         <form action="{{ site.baseurl }}/recherche">
-            <input type="search" placeholder="Rechercher un livre" /><!--
+            <input list="livres" type="search" placeholder="Titre du livre recherché" /><!--
             --><input type="submit" value="Chercher" />
+            {% include data-livres.html %}
         </form>
     </div>
 </section>
