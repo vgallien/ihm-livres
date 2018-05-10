@@ -2,7 +2,9 @@
 layout: defaultWithSearchBar
 ---
 
-<a href="{{ site.baseurl }}/recherche" title="Retour aux résultats">Retour aux résultats</a>
+<div class="container">
+    <a href="{{ site.baseurl }}/recherche" title="Retour aux résultats">Retour aux résultats</a>
+</div>
 <section class="livre-infos">
     <div class="container">
         <h1>Titre du livre</h1>
@@ -33,7 +35,7 @@ layout: defaultWithSearchBar
         <h2>Annonces</h2>
         <div class="resultat">
             <a class="btn-details" href="{{ site.baseurl }}/details" title="Voir l'offre">Détails</a>
-            <p>Pseudo (note)</p>
+            <p><a href="{{ site.baseurl }}/utilisateur" title="En savoir plus">Pseudo (note)</a></p>
             <p>Localité - Mode de livraison</p>
             <p>Description de l'offre</p>
         </div>

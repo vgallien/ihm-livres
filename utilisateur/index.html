@@ -5,11 +5,9 @@ layout: defaultWithSearchBar
 <section class="infos-user">
     <div class="container">
         <div class="user-image">
-            <img src="images/avatar.png" alt="Fichier personne" title="Fichier personne" />
-        </div>
-        <!--
-                -->
-        <div class="user-infos">
+            <img src="{{ site.baseurl }}/images/avatar.png" alt="Fichier personne" title="Fichier personne" />
+        </div><!--
+        --><div class="user-infos">
             <h1>Pseudo (note)</h1>
             <p>Ville</p>
             <p>
@@ -26,7 +24,7 @@ layout: defaultWithSearchBar
 <section>
     <div class="container">
         <h2>Dernières évaluations</h2>
-        <p>Le xx/xx/xx par Pseudo</p>
+        <p>Le xx/xx/xx par <a href="{{ site.baseurl }}/utilisateur" title="En savoir plus">Pseudo</a></p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -35,11 +33,14 @@ layout: defaultWithSearchBar
 </section>
 <section>
     <div class="container">
-        <h2>Offres</h2>
-        <div>
-            <img src="https://picsum.photos/100/150/?random" alt="Livre" title="Livre" />
+        <h2>Ses offres</h2>
+        <div class="livre-image">
+            {% include livre.html %}
         </div>
-        <h3>Titre du livre</h3>
-        <p>Description du livre</p>
+        <div class="livre-description">
+            <h3>Titre du livre</h3>
+            <p>Description du livre</p>
+            <a class="btn" href="{{ site.baseurl }}/details" title="En savoir plus">En savoir plus</a>
+        </div>
     </div>
 </section>
