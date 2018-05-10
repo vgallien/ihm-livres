@@ -30,6 +30,22 @@ body {
     padding: 1%;
 }
 
+.maquette-livre {
+    position: relative;
+    height: 40px;
+    width: 30px;
+    border: 1px solid #333;
+}
+.maquette-livre:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    transform: rotate(45deg);
+    background-color: #333;
+}
+
 /* HEADER STYLES */
 .header {
     height: 50px;
