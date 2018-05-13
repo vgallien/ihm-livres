@@ -5,6 +5,11 @@ layout: defaultWithSearchBar
 <div class="container">
     <div class="filtres">
         <form>
+            <label for="tri">Trier par</label>
+            <select id="tri">
+                <option>Prix</option>
+                <option>Note utilisateur</option>
+            </select>
             <select>
                 <option>-- Localisation --</option>
                 <option>Normandie</option>
@@ -14,11 +19,19 @@ layout: defaultWithSearchBar
                 <option>-- Mode de livraison --</option>
                 <option>En main propre</option>
                 <option>Colissimo</option>
+                <option>Point retrait</option>
             </select>
             <select>
                 <option>-- Trier par --</option>
                 <option>Localisation</option>
                 <option>Prix</option>
+            </select>
+            <label for="langue">Langue du livre</label>
+            <select id="langue">
+                <option>Français</option>
+                <option>Anglais</option>
+                <option>Allemand</option>
+                <option>Espagnol</option>
             </select>
             <div>
                 Afficher uniquement
@@ -34,9 +47,17 @@ layout: defaultWithSearchBar
                 {% include livre.html %}
             </div>
             <div class="livre-description">
-                <h1>Titre du livre recherché</h1>
+                <h1>Titre du livre recherché <span class="note">(note)</span></h1>
+                <p>Langue : française</p>
                 <p>Description du livre</p>
                 <a href="{{ site.baseurl }}/livre" title="En savoir plus">En savoir plus</a>
+                <a href="#" title="En savoir plus">S'abonner</a>
+                <div class="moreInfos">
+                    5 résultats trouvés <br />
+                    12 personnes possèdent ce livre <br />
+                    21 personnes recherchent ce livre <br />
+                    En moyenne ce livre vaut 5 €
+                </div>
             </div>
         </div>
         <div class="resultats-liste">
@@ -47,7 +68,7 @@ layout: defaultWithSearchBar
                     <a class="btn-details" href="{{ site.baseurl }}/details" title="Voir l'offre">Détails</a>
                 </div>
                 <p><a href="{{ site.baseurl }}/utilisateur" title="En savoir plus">Pseudo (note)</a></p>
-                <p>Localité - Mode de livraison</p>
+                <p>Pays - Localité - Mode de livraison</p>
                 <p>Description de l'offre</p>
             </div>
             {% endfor %}
