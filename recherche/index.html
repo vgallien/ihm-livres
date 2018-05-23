@@ -5,40 +5,74 @@ layout: defaultWithSearchBar
 <div class="container">
     <div class="filtres">
         <form>
-            <label for="tri">Trier par</label>
-            <select id="tri">
-                <option>Prix</option>
-                <option>Note utilisateur</option>
-            </select>
-            <select>
-                <option>-- Localisation --</option>
-                <option>Normandie</option>
-                <option>Bretagne</option>
-            </select>
-            <select>
-                <option>-- Mode de livraison --</option>
-                <option>En main propre</option>
-                <option>Colissimo</option>
-                <option>Point retrait</option>
-            </select>
-            <select>
-                <option>-- Trier par --</option>
-                <option>Localisation</option>
-                <option>Prix</option>
-            </select>
-            <label for="langue">Langue du livre</label>
-            <select id="langue">
-                <option>Français</option>
-                <option>Anglais</option>
-                <option>Allemand</option>
-                <option>Espagnol</option>
-            </select>
-            <div>
-                Afficher uniquement
-                <input type="checkbox" /><label>Location</label>
-                <input type="checkbox" /><label>Vente</label>
-                <input type="checkbox" /><label>Echange</label>
-            </div>
+            <fieldset class="form-group">
+                <legend class="col-form-label pt-0">Trier par</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tri" id="prix" checked />
+                    <label class="form-check-label" for="prix">Prix</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tri" id="note" />
+                    <label class="form-check-label" for="note">Note</label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <legend class="col-form-label pt-0">Localisation</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="localisation" id="caen" />
+                    <label class="form-check-label" for="caen">Caen (4)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="localisation" id="paris" />
+                    <label class="form-check-label" for="paris">Paris (1)</label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <legend class="col-form-label pt-0">Mode de livraison</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="livraison" id="en-main-propre" />
+                    <label class="form-check-label" for="en-main-propre">En main propre (5)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="livraison" id="colissimo" />
+                    <label class="form-check-label" for="colissimo">Colissimo (4)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="livraison" id="mondial-relay" />
+                    <label class="form-check-label" for="mondial-relay">Mondial Relay (4)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="livraison" id="point-retrait" />
+                    <label class="form-check-label" for="point-retrait">Point retrait (1)</label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <legend class="col-form-label pt-0">Langue du livre</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="langue" id="français" />
+                    <label class="form-check-label" for="français">Français (4)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="langue" id="anglais" />
+                    <label class="form-check-label" for="anglais">Anglais (1)</label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <legend class="col-form-label pt-0">Afficher uniquement</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="afficher" id="location" />
+                    <label class="form-check-label" for="location">Location (3)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="afficher" id="vente" />
+                    <label class="form-check-label" for="vente">Vente (1)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="afficher" id="echange" />
+                    <label class="form-check-label" for="echange">Echange (1)</label>
+                </div>
+            </fieldset>
+            <button class="btn btn-primary">Filtrer</button>
         </form>
     </div><!--
     --><div class="resultats">
